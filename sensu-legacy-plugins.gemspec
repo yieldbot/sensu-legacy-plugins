@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.platform               = Gem::Platform::RUBY
   s.required_ruby_version  = '>= 1.9.3'
   s.summary                = 'Yieldbot fork of orginal Sensu plugins repo'
-  s.version                = SensuYieldbotPlugins::Version::STRING
+  s.version                = SensuLegacyPlugins::Version::STRING
 
   s.files                  = Dir['{bin}/**/*', '{lib,spec}/**/*.rb', 'LICENSE', '*.md']
   s.executables            = s.files.grep(%r{^bin/}) { |f| File.basename(f) }

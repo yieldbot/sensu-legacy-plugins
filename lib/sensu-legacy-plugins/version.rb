@@ -1,7 +1,7 @@
 require 'json'
 
 # encoding: utf-8
-module SensuYieldbotPlugins
+module SensuLegacyPlugins
   # This defines the version of the gem
   module Version
     MAJOR = 0
@@ -10,7 +10,7 @@ module SensuYieldbotPlugins
 
     STRING = [MAJOR, MINOR, PATCH].compact.join('.')
 
-    NAME   = 'Sensu-Yieldbot-Plugins'
+    NAME   = 'Sensu-Legacy-Plugins'
     BANNER = "#{NAME} v%s"
 
     module_function

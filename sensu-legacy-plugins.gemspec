@@ -2,7 +2,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'date'
-require 'sensu-yieldbot-plugins/version'
+require 'sensu-legacy-plugins/version'
 
 Gem::Specification.new do |s|
   s.authors                = ['Yieldbot, Inc. and contributors']
@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.date                   = Date.today.to_s
   s.description            = 'Yieldbot fork of orginal Sensu plugins repo'
   s.email                  = '<devops@yieldbot.com>'
-  s.homepage               = 'https://github.com/yieldbot/sensu-yieldbot-plugins'
+  s.homepage               = 'https://github.com/yieldbot/sensu-legacy-plugins'
   s.license                = 'MIT'
-  s.name                   = 'sensu-yieldbot-plugins'
+  s.name                   = 'sensu-legacy-plugins'
   s.platform               = Gem::Platform::RUBY
   s.required_ruby_version  = '>= 1.9.3'
   s.summary                = 'Yieldbot fork of orginal Sensu plugins repo'

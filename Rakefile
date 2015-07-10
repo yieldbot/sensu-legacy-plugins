@@ -5,7 +5,7 @@ require 'github/markup'
 require 'rubocop/rake_task'
 require 'redcarpet'
 require 'yard/rake/yardoc_task'
-require_relative 'lib/sensu-yieldbot-plugins'
+require_relative 'lib/sensu-legacy-plugins'
 
 args = [:spec, :make_bin_executable, :yard, :rubocop]
 
@@ -26,14 +26,14 @@ task :make_bin_executable do
   `chmod -R +x bin/*`
 end
 
-desc 'Retrieve the current version of sensu-yieldbot-plugins'
+desc 'Retrieve the current version of sensu-legacy-plugins'
 task :version do
   puts SensuYieldbotPlugins::Version.json_version
 end
 
 desc 'Bump the PATCH version of Sensu-Yieldbot-Plugins'
 task :bump do
-  version_file = 'lib/sensu-yieldbot-plugins/version.rb'
+  version_file = 'lib/sensu-legacy-plugins/version.rb'
 
   # Read the file, bump the PATCH version
   contents = File.read(version_file).gsub(/(PATCH = )(\d+)/) { |_| Regexp.last_match[1] + (Regexp.last_match[2].to_i + 1).to_s }

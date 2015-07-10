@@ -1,8 +1,8 @@
-require 'sensu-yieldbot-plugins/version'
+require 'sensu-legacy-plugins/version'
 
 # Load the defaults
 #
-module SensuYieldbotPlugins
+module SensuLegacyPlugins
   class << self
       attr_writer :ui
         end

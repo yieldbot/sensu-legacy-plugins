@@ -28,7 +28,7 @@ end
 
 desc 'Retrieve the current version of sensu-legacy-plugins'
 task :version do
-  puts SensuYieldbotPlugins::Version.json_version
+  puts SensuLegacyPlugins::Version.json_version
 end
 
 desc 'Bump the PATCH version of Sensu-Yieldbot-Plugins'

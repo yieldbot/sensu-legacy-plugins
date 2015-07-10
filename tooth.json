@@ -1,0 +1,7 @@
+{
+  "coordinates": {
+    "org": "com.yieldbot.devops",
+    "name": "sensu-yieldbot-plugins",
+    "type": "gem"
+  }
+}

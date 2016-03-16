@@ -104,12 +104,12 @@ class CheckInode < Sensu::Plugin::Check::CLI
       begin
         _fs, type, _blocks, _used, _avail, inode_usage, mnt = line.split
         next if config[:includeline] && !config[:includeline]
-                                         .find { |x| line.match(x) }
+                .find { |x| line.match(x) }
         next if config[:fstype] && !config[:fstype].include?(type)
         next if config[:ignoretype] && config[:ignoretype].include?(type)
         next if config[:ignoremnt] && config[:ignoremnt].include?(mnt)
         next if config[:ignoreline] && config[:ignoreline]
-                                       .find { |x| line.match(x) }
+                .find { |x| line.match(x) }
         puts line if config[:debug]
       rescue
         unknown "malformed line from df: #{line}"

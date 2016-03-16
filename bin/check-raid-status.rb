@@ -72,7 +72,7 @@ h.each do |key, value|
   failed_dev = value.match(/\[[U,_]*\]/).to_s.count '_' || 0
   recovery_state = value.include? 'recovery'
 
-  line_out =  "#{key} is #{raid_state}
+  line_out = "#{key} is #{raid_state}
                #{total_dev} total devices
                #{working_dev} working devices
                #{failed_dev} failed devices"

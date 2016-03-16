@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.date                   = Date.today.to_s
   s.description            = 'Yieldbot fork of orginal Sensu plugins repo'
   s.email                  = '<devops@yieldbot.com>'
-  s.executables            = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
+  s.executables            = Dir.glob('bin/*.rb').map { |file| File.basename(file) }
   s.files                  = Dir.glob('{bin,lib}/**/*')
   s.homepage               = 'https://github.com/yieldbot/sensu-legacy-plugins'
   s.license                = 'MIT'

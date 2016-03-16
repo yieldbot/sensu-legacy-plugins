@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.version                = SensuLegacyPlugins::Version::STRING
 
   s.files                  = Dir['{bin}/**/*', '{lib,spec}/**/*.rb', 'LICENSE', '*.md']
-  s.executables            = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  s.executables            = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths          = %w(lib)
 
